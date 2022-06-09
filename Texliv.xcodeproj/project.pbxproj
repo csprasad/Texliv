@@ -118,6 +118,9 @@
 				C835B13E28526B06000E6090 /* CardView */,
 				C8627C192852135100349061 /* Onboarding */,
 				C835B1412852783E000E6090 /* FloatingTextField.swift */,
+				C8A0EE3B28511312006454B0 /* ViewController.swift */,
+				C8627C0C2851EAA300349061 /* EmailVC.swift */,
+				C8627C0E2851F05500349061 /* OTPVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,9 +168,6 @@
 				C8627C122852126100349061 /* Networking */,
 				C8A0EE3728511312006454B0 /* AppDelegate.swift */,
 				C8A0EE3928511312006454B0 /* SceneDelegate.swift */,
-				C8A0EE3B28511312006454B0 /* ViewController.swift */,
-				C8627C0C2851EAA300349061 /* EmailVC.swift */,
-				C8627C0E2851F05500349061 /* OTPVC.swift */,
 				C8A0EE3D28511312006454B0 /* Main.storyboard */,
 				C8A0EE4028511314006454B0 /* Assets.xcassets */,
 				C8327C7228525F43003C64E5 /* girl-doing-skating.png */,
