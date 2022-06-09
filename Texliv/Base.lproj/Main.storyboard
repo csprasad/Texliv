@@ -124,6 +124,11 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="Lh5-nD-IdN">
                                         <rect key="frame" x="45" y="561.5" width="60" height="60"/>
@@ -185,7 +190,6 @@
         <!--EmailVC-->
         <scene sceneID="3IA-LF-C94">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EsH-6X-6XM" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="EmailVC" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="8vW-FH-mhQ" customClass="EmailVC" customModule="Texliv" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z0B-Nr-gky">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -267,7 +271,7 @@
                                         <color key="textColor" red="0.22352941179999999" green="0.24313725489999999" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DrS-WJ-Ki5">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DrS-WJ-Ki5" customClass="FloatingTextField" customModule="Texliv" customModuleProvider="target">
                                         <rect key="frame" x="30" y="486" width="354" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="C3e-jv-n0j"/>
@@ -291,8 +295,13 @@
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                            <color key="baseForegroundColor" red="0.1960784314" green="0.21176470589999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="iqS-Al-EWd" kind="show" id="LZc-U6-Y68"/>
                                         </connections>
@@ -356,7 +365,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QRF-m5-og5"/>
+                    <connections>
+                        <outlet property="buttonGetOtp" destination="vWL-pD-LKo" id="l8B-70-GCn"/>
+                        <outlet property="emailTextField" destination="DrS-WJ-Ki5" id="nQJ-Ly-zeE"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EsH-6X-6XM" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1621.7391304347827" y="93.75"/>
         </scene>
@@ -380,7 +394,6 @@
         <!--OTPVC-->
         <scene sceneID="xcb-uu-K0w">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zGR-bl-akh" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="OTPVC" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="iqS-Al-EWd" customClass="OTPVC" customModule="Texliv" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H2s-EU-ejv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -476,6 +489,9 @@
                                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                     <color key="baseForegroundColor" red="0.22352941179999999" green="0.24313725489999999" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btnResendOTP:" destination="iqS-Al-EWd" eventType="touchUpInside" id="SHH-Rs-TKb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -494,7 +510,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Eql-Ww-fpR">
                                         <rect key="frame" x="44.5" y="497.5" width="325" height="50"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GDC-bD-dAH">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GDC-bD-dAH">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="cXr-NS-Iw2"/>
@@ -502,7 +518,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="go"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nse-XI-p9e">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nse-XI-p9e">
                                                 <rect key="frame" x="55" y="0.0" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="n1h-bG-LVC"/>
@@ -510,7 +526,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="go"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AEk-7J-59e">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AEk-7J-59e">
                                                 <rect key="frame" x="110" y="0.0" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="bcE-Fo-54Q"/>
@@ -518,7 +534,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="go"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgz-SQ-pIp">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgz-SQ-pIp">
                                                 <rect key="frame" x="165" y="0.0" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="yAe-y1-btb"/>
@@ -526,7 +542,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="go"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SyV-c2-JEN">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SyV-c2-JEN">
                                                 <rect key="frame" x="220" y="0.0" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="XLt-d2-XaU"/>
@@ -534,7 +550,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="go"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="raG-Vs-RPy">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="raG-Vs-RPy">
                                                 <rect key="frame" x="275" y="0.0" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="3Wc-gS-uXi"/>
@@ -563,8 +579,13 @@
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                            <color key="baseForegroundColor" red="0.1960784314" green="0.21176470589999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="verifyOTPAction:" destination="iqS-Al-EWd" eventType="touchUpInside" id="fLt-zh-oyh"/>
                                         </connections>
@@ -629,7 +650,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zOC-lk-lAY"/>
+                    <connections>
+                        <outlet property="btnGetOtp" destination="Vtu-1E-2ma" id="i94-rV-7Oj"/>
+                        <outlet property="txtFldOtp1" destination="GDC-bD-dAH" id="86g-f8-AjY"/>
+                        <outlet property="txtFldOtp2" destination="nse-XI-p9e" id="g1S-1d-kxu"/>
+                        <outlet property="txtFldOtp3" destination="AEk-7J-59e" id="C66-6O-Ipb"/>
+                        <outlet property="txtFldOtp4" destination="fgz-SQ-pIp" id="ALG-ZF-zXc"/>
+                        <outlet property="txtFldOtp5" destination="SyV-c2-JEN" id="YJQ-V1-jN6"/>
+                        <outlet property="txtFldOtp6" destination="raG-Vs-RPy" id="zd6-BD-Mh2"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zGR-bl-akh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2302.898550724638" y="93.75"/>
         </scene>
@@ -723,7 +754,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
