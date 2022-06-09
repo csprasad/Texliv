@@ -3,10 +3,11 @@ Texliv is a demo application for getBasis interview.
 
 ## App Screens
 
-![](App%20Screens/app_logo_preview.png)
+### - Select login screen
+<img src="https://github.com/csprasad/Texliv/blob/main/App%20Screens/login_1.png" data-canonical-src="https://github.com/csprasad/Texliv/blob/main/App%20Screens/login_1.png" width="220" height="450" />
 
-![](App%20Screens/login_1.png)
+### - Enter email screen
+<img src="https://github.com/csprasad/Texliv/blob/main/App%20Screens/login_2.png" data-canonical-src="https://github.com/csprasad/Texliv/blob/main/App%20Screens/login_2.png" width="220" height="450" />
 
-![](App%20Screens/login_2.png)
-
-![](App%20Screens/login_2.png)
+### - Enter otp screen
+<img src="https://github.com/csprasad/Texliv/blob/main/App%20Screens/login_3.png" data-canonical-src="https://github.com/csprasad/Texliv/blob/main/App%20Screens/login_3.png" width="220" height="450" />
