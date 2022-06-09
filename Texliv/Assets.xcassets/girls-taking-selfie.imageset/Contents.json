@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "girls-taking-selfie.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "lady-with-megaphone.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
