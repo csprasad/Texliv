@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C81284D22853313700AA31E2 /* fetchToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81284D12853313700AA31E2 /* fetchToken.swift */; };
+		C81284D42853377500AA31E2 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81284D32853377500AA31E2 /* HomeVC.swift */; };
+		C81284D62853680A00AA31E2 /* verifyOTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81284D52853680A00AA31E2 /* verifyOTPModel.swift */; };
 		C8327C7328525F43003C64E5 /* girl-doing-skating.png in Resources */ = {isa = PBXBuildFile; fileRef = C8327C7228525F43003C64E5 /* girl-doing-skating.png */; };
 		C835B131285269E1000E6090 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C835B130285269E1000E6090 /* ApiResponse.swift */; };
 		C835B133285269FF000E6090 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C835B132285269FF000E6090 /* AppError.swift */; };
@@ -34,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C81284D12853313700AA31E2 /* fetchToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchToken.swift; sourceTree = "<group>"; };
+		C81284D32853377500AA31E2 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		C81284D52853680A00AA31E2 /* verifyOTPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = verifyOTPModel.swift; sourceTree = "<group>"; };
 		C8327C7228525F43003C64E5 /* girl-doing-skating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "girl-doing-skating.png"; sourceTree = "<group>"; };
 		C835B130285269E1000E6090 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		C835B132285269FF000E6090 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 				C8A0EE3B28511312006454B0 /* ViewController.swift */,
 				C8627C0C2851EAA300349061 /* EmailVC.swift */,
 				C8627C0E2851F05500349061 /* OTPVC.swift */,
+				C81284D32853377500AA31E2 /* HomeVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				C8627C17285212E200349061 /* OnboardingSlide.swift */,
+				C81284D12853313700AA31E2 /* fetchToken.swift */,
+				C81284D52853680A00AA31E2 /* verifyOTPModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -252,12 +261,15 @@
 				C835B13B28526A84000E6090 /* String+Extension.swift in Sources */,
 				C835B131285269E1000E6090 /* ApiResponse.swift in Sources */,
 				C835B13528526A16000E6090 /* Method.swift in Sources */,
+				C81284D62853680A00AA31E2 /* verifyOTPModel.swift in Sources */,
 				C835B14428528872000E6090 /* CALayer+Extension.swift in Sources */,
 				C8627C18285212E200349061 /* OnboardingSlide.swift in Sources */,
 				C8627C0F2851F05500349061 /* OTPVC.swift in Sources */,
 				C8627C11285211E600349061 /* OnboardingVC.swift in Sources */,
 				C835B13728526A2E000E6090 /* Route.swift in Sources */,
 				C835B13D28526AB9000E6090 /* UIView+Extension.swift in Sources */,
+				C81284D42853377500AA31E2 /* HomeVC.swift in Sources */,
+				C81284D22853313700AA31E2 /* fetchToken.swift in Sources */,
 				C8A0EE3C28511312006454B0 /* ViewController.swift in Sources */,
 				C8627C0D2851EAA300349061 /* EmailVC.swift in Sources */,
 				C835B14028526B18000E6090 /* CardView.swift in Sources */,

@@ -10,9 +10,22 @@ import Foundation
 
 struct NetworkService {
     
+    
     static let shared = NetworkService()
     
     private init() {}
+    
+    func fetchToken(email: String, completion: @escaping(Result<fetchTokenModel, Error>) -> Void) {
+        let params = ["email": email]
+        request(route: .fetchToken, method: .post, parameters: params, completion: completion)
+    }
+    
+    func verifyOTP(token: String, email: String, code: String, completion: @escaping(Result<verifyOTPModel, Error>) -> Void) {
+        let params = ["token": token, "email": email, "verificationCode": code]
+        
+        request(route: .otpValidate, method: .post, parameters: params, completion: completion)
+    }
+    
     
     private func request<T: Decodable>(route: Route,
                                      method: Method,
@@ -47,6 +60,15 @@ struct NetworkService {
             return
         }
         
+//
+//        do {
+//            let dd = JSONDecoder()
+//            let di = try! dd.decode(ApiResponse<T>.self, from: result.get())
+//            print("dddd",di)
+//        } catch let error {
+//            print("hi na", error.localizedDescription)
+//        }
+        
         switch result {
         case .success(let data):
             let decoder = JSONDecoder()
@@ -60,7 +82,8 @@ struct NetworkService {
                 return
             }
             
-            if let decodedData = response.data {
+            
+            if let decodedData = response.results {
                 completion(.success(decodedData))
             } else {
                 completion(.failure(AppError.unknownError))
@@ -70,11 +93,11 @@ struct NetworkService {
         }
     }
     
-    /// This function helps us to generate a urlRequest
+    // MARK: - This function helps us to generate a urlRequest
     /// - Parameters:
-    ///   - route: the path the the resource in the backend
-    ///   - method: type of request to be made
-    ///   - parameters: whatever extra information you need to pass to the backend
+    ///   - route: url path for request.
+    ///   - method: type of request to called.
+    ///   - parameters: params which required to get data from backend.
     /// - Returns: URLRequest
     private func createRequest(route: Route,
                                method: Method,

@@ -19,7 +19,7 @@ enum Route {
         case .fetchToken:
             return "/users/email"
         case .otpValidate:
-            return "/users/email"
+            return "/users/email/verify"
         }
     }
 }

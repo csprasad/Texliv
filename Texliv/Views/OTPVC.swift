@@ -18,6 +18,12 @@ class OTPVC: UIViewController {
 
     @IBOutlet weak var btnGetOtp: UIButton!
     
+    var tokenDict: fetchTokenModel!
+    var email: String!
+    
+    var getOTP: String = ""
+//            getOTP = (txtFldOtp1.text ?? "") + (txtFldOtp2.text ?? "") + (txtFldOtp3.text ?? "") + (txtFldOtp4.text ?? "") + (txtFldOtp5.text ?? "") + (txtFldOtp6.text ?? "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -47,10 +53,21 @@ class OTPVC: UIViewController {
     //Verify OTP Action
     @IBAction func btnVerifyOTPAction(_ sender: UIButton) {
         
+        NetworkService.shared.verifyOTP(token: String(tokenDict.token), email: email, code: getOTP) { (result) in
+            switch result {
+            case .success(let token):
+                print("Token is:", token)
+                let controller = HomeVC.instantiate()
+                controller.email = self.email
+                self.navigationController?.pushViewController(controller, animated: true)
+            case .failure(let error):
+                print("error is:", error.localizedDescription)
+            }
+        }
     }
     
     @IBAction func btnResendOTP(_ sender: UIButton) {
-        //service call again
+        
     }
     
 }
@@ -87,6 +104,7 @@ extension OTPVC: UITextFieldDelegate {
                 }
                 if textField == txtFldOtp6 {
                     txtFldOtp6.resignFirstResponder()
+                    btnGetOtp.isUserInteractionEnabled = true
                     btnGetOtp.backgroundColor = #colorLiteral(red: 0.2235294118, green: 0.2431372549, blue: 0.2745098039, alpha: 1)
                 }
                 
@@ -107,6 +125,7 @@ extension OTPVC: UITextFieldDelegate {
                 }
                 if textField == txtFldOtp6 {
                     txtFldOtp5.becomeFirstResponder()
+                    btnGetOtp.isUserInteractionEnabled = false
                     btnGetOtp.backgroundColor = #colorLiteral(red: 0.5725490196, green: 0.6039215686, blue: 0.6705882353, alpha: 1)
                 }
                 if textField == txtFldOtp1 {
