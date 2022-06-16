@@ -8,5 +8,6 @@
 import Foundation
 
 enum Method: String {
-    case post = "POST"
+    case post   = "POST"
+    case put    = "PUT"
 }

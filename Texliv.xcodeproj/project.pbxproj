@@ -21,6 +21,9 @@
 		C835B14028526B18000E6090 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C835B13F28526B18000E6090 /* CardView.swift */; };
 		C835B1422852783E000E6090 /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C835B1412852783E000E6090 /* FloatingTextField.swift */; };
 		C835B14428528872000E6090 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C835B14328528872000E6090 /* CALayer+Extension.swift */; };
+		C83B8032285B3EE5001FFB0E /* UITextfield+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83B8031285B3EE4001FFB0E /* UITextfield+Extension.swift */; };
+		C83B8034285B420C001FFB0E /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83B8033285B420C001FFB0E /* OTPStackView.swift */; };
+		C83B8037285B577D001FFB0E /* NeuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83B8036285B577D001FFB0E /* NeuButton.swift */; };
 		C8627C0D2851EAA300349061 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8627C0C2851EAA300349061 /* EmailVC.swift */; };
 		C8627C0F2851F05500349061 /* OTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8627C0E2851F05500349061 /* OTPVC.swift */; };
 		C8627C11285211E600349061 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8627C10285211E600349061 /* OnboardingVC.swift */; };
@@ -51,6 +54,9 @@
 		C835B13F28526B18000E6090 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C835B1412852783E000E6090 /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		C835B14328528872000E6090 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		C83B8031285B3EE4001FFB0E /* UITextfield+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Extension.swift"; sourceTree = "<group>"; };
+		C83B8033285B420C001FFB0E /* OTPStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPStackView.swift; sourceTree = "<group>"; };
+		C83B8036285B577D001FFB0E /* NeuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuButton.swift; sourceTree = "<group>"; };
 		C8627C0C2851EAA300349061 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
 		C8627C0E2851F05500349061 /* OTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVC.swift; sourceTree = "<group>"; };
 		C8627C10285211E600349061 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
@@ -87,6 +93,17 @@
 			path = CardView;
 			sourceTree = "<group>";
 		};
+		C83B8035285B4212001FFB0E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C8A0EE3B28511312006454B0 /* ViewController.swift */,
+				C8627C0C2851EAA300349061 /* EmailVC.swift */,
+				C8627C0E2851F05500349061 /* OTPVC.swift */,
+				C81284D32853377500AA31E2 /* HomeVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		C8627C122852126100349061 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +124,7 @@
 				C835B13A28526A84000E6090 /* String+Extension.swift */,
 				C835B13C28526AB9000E6090 /* UIView+Extension.swift */,
 				C835B14328528872000E6090 /* CALayer+Extension.swift */,
+				C83B8031285B3EE4001FFB0E /* UITextfield+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -114,6 +132,7 @@
 		C8627C142852127D00349061 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				C83B8036285B577D001FFB0E /* NeuButton.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -121,13 +140,11 @@
 		C8627C15285212B300349061 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C83B8035285B4212001FFB0E /* ViewControllers */,
 				C835B13E28526B06000E6090 /* CardView */,
 				C8627C192852135100349061 /* Onboarding */,
 				C835B1412852783E000E6090 /* FloatingTextField.swift */,
-				C8A0EE3B28511312006454B0 /* ViewController.swift */,
-				C8627C0C2851EAA300349061 /* EmailVC.swift */,
-				C8627C0E2851F05500349061 /* OTPVC.swift */,
-				C81284D32853377500AA31E2 /* HomeVC.swift */,
+				C83B8033285B420C001FFB0E /* OTPStackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -274,11 +291,14 @@
 				C8627C0D2851EAA300349061 /* EmailVC.swift in Sources */,
 				C835B14028526B18000E6090 /* CardView.swift in Sources */,
 				C8627C1B2852137600349061 /* OnboardingCVCell.swift in Sources */,
+				C83B8037285B577D001FFB0E /* NeuButton.swift in Sources */,
 				C8A0EE3828511312006454B0 /* AppDelegate.swift in Sources */,
 				C835B13928526A4F000E6090 /* NetworkService.swift in Sources */,
 				C835B1422852783E000E6090 /* FloatingTextField.swift in Sources */,
 				C835B133285269FF000E6090 /* AppError.swift in Sources */,
 				C8627C1D285213D700349061 /* UserDefaults+Extension.swift in Sources */,
+				C83B8032285B3EE5001FFB0E /* UITextfield+Extension.swift in Sources */,
+				C83B8034285B420C001FFB0E /* OTPStackView.swift in Sources */,
 				C8627C1F285215C400349061 /* UIViewController+Extension.swift in Sources */,
 				C8A0EE3A28511312006454B0 /* SceneDelegate.swift in Sources */,
 			);

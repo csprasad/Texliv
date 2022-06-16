@@ -276,7 +276,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="C3e-jv-n0j"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="go"/>
                                     </textField>
                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWL-pD-LKo">
@@ -473,16 +473,16 @@
                                         <rect key="frame" x="60" y="571" width="294" height="35"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't get the OTP?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDk-6L-17j">
-                                                <rect key="frame" x="0.0" y="6.5" width="189.5" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="6.5" width="184" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                                 <color key="textColor" red="0.22352941179999999" green="0.24313725489999999" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXU-Y9-8Sl">
-                                                <rect key="frame" x="189.5" y="0.0" width="104.5" height="35"/>
+                                                <rect key="frame" x="184" y="0.0" width="110" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="cU5-pq-VDb"/>
-                                                    <constraint firstAttribute="width" constant="104.5" id="ioA-O7-Zlk"/>
+                                                    <constraint firstAttribute="width" constant="110" id="ioA-O7-Zlk"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="send again">
@@ -507,58 +507,8 @@
                                         <color key="textColor" red="0.22352941179999999" green="0.24313725489999999" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Eql-Ww-fpR">
-                                        <rect key="frame" x="44.5" y="497.5" width="325" height="50"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GDC-bD-dAH">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="cXr-NS-Iw2"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="go"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nse-XI-p9e">
-                                                <rect key="frame" x="55" y="0.0" width="50" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="n1h-bG-LVC"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="go"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AEk-7J-59e">
-                                                <rect key="frame" x="110" y="0.0" width="50" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="bcE-Fo-54Q"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="go"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgz-SQ-pIp">
-                                                <rect key="frame" x="165" y="0.0" width="50" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="yAe-y1-btb"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="go"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SyV-c2-JEN">
-                                                <rect key="frame" x="220" y="0.0" width="50" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="XLt-d2-XaU"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="go"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="raG-Vs-RPy">
-                                                <rect key="frame" x="275" y="0.0" width="50" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="3Wc-gS-uXi"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="go"/>
-                                            </textField>
-                                        </subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Eql-Ww-fpR" customClass="OTPStackView" customModule="Texliv" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="497.5" width="354" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="D7m-nj-0yO"/>
                                         </constraints>
@@ -608,9 +558,11 @@
                                 <constraints>
                                     <constraint firstItem="LEN-Rx-B1n" firstAttribute="leading" secondItem="Vtu-1E-2ma" secondAttribute="leading" constant="30" id="9xP-Lp-ySx"/>
                                     <constraint firstItem="8t9-pa-4IP" firstAttribute="top" secondItem="Zft-Uf-vFP" secondAttribute="topMargin" constant="26" id="FJ0-jM-0xe"/>
+                                    <constraint firstItem="Eql-Ww-fpR" firstAttribute="leading" secondItem="O7i-ka-XgP" secondAttribute="leading" id="G4d-x1-tgs"/>
                                     <constraint firstItem="I75-vX-kLL" firstAttribute="centerX" secondItem="Vtu-1E-2ma" secondAttribute="centerX" id="HIB-fg-9GV"/>
                                     <constraint firstItem="vys-gv-Vy1" firstAttribute="centerX" secondItem="0tr-dB-VtM" secondAttribute="centerX" id="Hi4-zC-xfd"/>
                                     <constraint firstItem="O7i-ka-XgP" firstAttribute="leading" secondItem="C1k-FP-xjd" secondAttribute="leading" id="J7c-sJ-rLe"/>
+                                    <constraint firstItem="Eql-Ww-fpR" firstAttribute="trailing" secondItem="O7i-ka-XgP" secondAttribute="trailing" id="L1w-zC-9hb"/>
                                     <constraint firstItem="O7i-ka-XgP" firstAttribute="trailing" secondItem="C1k-FP-xjd" secondAttribute="trailing" id="LT4-ec-Tg7"/>
                                     <constraint firstItem="ky4-UP-d5Q" firstAttribute="centerX" secondItem="Zft-Uf-vFP" secondAttribute="centerX" id="TMO-99-fHP"/>
                                     <constraint firstItem="C1k-FP-xjd" firstAttribute="leading" secondItem="Zft-Uf-vFP" secondAttribute="leading" constant="30" id="X53-Ob-VrV"/>
@@ -621,7 +573,6 @@
                                     <constraint firstItem="I75-vX-kLL" firstAttribute="top" secondItem="Vtu-1E-2ma" secondAttribute="bottom" constant="30" id="dmR-zZ-vSM"/>
                                     <constraint firstItem="0tr-dB-VtM" firstAttribute="centerX" secondItem="Zft-Uf-vFP" secondAttribute="centerX" id="k6H-MF-7XT"/>
                                     <constraint firstItem="0tr-dB-VtM" firstAttribute="top" secondItem="Zft-Uf-vFP" secondAttribute="top" constant="92" id="kPV-e4-Yw7"/>
-                                    <constraint firstItem="Eql-Ww-fpR" firstAttribute="centerX" secondItem="O7i-ka-XgP" secondAttribute="centerX" id="lbs-Xk-jg6"/>
                                     <constraint firstItem="C1k-FP-xjd" firstAttribute="top" secondItem="vys-gv-Vy1" secondAttribute="bottom" constant="34" id="nay-Qe-dGq"/>
                                     <constraint firstItem="O7i-ka-XgP" firstAttribute="top" secondItem="C1k-FP-xjd" secondAttribute="bottom" constant="25" id="oPl-Uu-UMQ"/>
                                     <constraint firstItem="O7i-ka-XgP" firstAttribute="centerX" secondItem="C1k-FP-xjd" secondAttribute="centerX" id="ppB-hG-yfb"/>
@@ -651,13 +602,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="zOC-lk-lAY"/>
                     <connections>
+                        <outlet property="OTPStackView" destination="Eql-Ww-fpR" id="Uj4-oe-Eks"/>
                         <outlet property="btnGetOtp" destination="Vtu-1E-2ma" id="i94-rV-7Oj"/>
-                        <outlet property="txtFldOtp1" destination="GDC-bD-dAH" id="86g-f8-AjY"/>
-                        <outlet property="txtFldOtp2" destination="nse-XI-p9e" id="g1S-1d-kxu"/>
-                        <outlet property="txtFldOtp3" destination="AEk-7J-59e" id="C66-6O-Ipb"/>
-                        <outlet property="txtFldOtp4" destination="fgz-SQ-pIp" id="ALG-ZF-zXc"/>
-                        <outlet property="txtFldOtp5" destination="SyV-c2-JEN" id="YJQ-V1-jN6"/>
-                        <outlet property="txtFldOtp6" destination="raG-Vs-RPy" id="zd6-BD-Mh2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGR-bl-akh" sceneMemberID="firstResponder"/>

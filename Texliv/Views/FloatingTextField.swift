@@ -39,7 +39,7 @@ final class FloatingTextField: UITextField {
     }
 
     private var fontSize: CGFloat {
-        font?.pointSize ?? 0
+       font?.pointSize ?? 0
     }
 
     private var labelHeight: CGFloat {
@@ -162,8 +162,6 @@ final class FloatingTextField: UITextField {
             label.transform = isActive ? transform : .identity
             return
         }
-        
-        
         
         UIView.animate(withDuration: .animation250ms) {
             self.label.transform = isActive ? transform : .identity

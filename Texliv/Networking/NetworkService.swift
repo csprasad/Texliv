@@ -23,7 +23,8 @@ struct NetworkService {
     func verifyOTP(token: String, email: String, code: String, completion: @escaping(Result<verifyOTPModel, Error>) -> Void) {
         let params = ["token": token, "email": email, "verificationCode": code]
         
-        request(route: .otpValidate, method: .post, parameters: params, completion: completion)
+        request(route: .otpValidate, method: .put, parameters: params, completion: completion)
+        print("Params are:", params)
     }
     
     
@@ -110,7 +111,7 @@ struct NetworkService {
         
         if let params = parameters {
             switch method {
-            case .post:
+            case .post, .put:
                 let bodyData = try? JSONSerialization.data(withJSONObject: params, options: [])
                 urlRequest.httpBody = bodyData
             }
