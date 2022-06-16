@@ -24,5 +24,4 @@ Texliv is a demo application for getBasis interview.
 
 
 
-
-<!--  Image credit's : Iconscout Store - [Indian Doodle Illustration Pack](https://iconscout.com/illustration-pack/indian-doodle) -->
+Image credit's : Iconscout Store - [Indian Doodle Illustration Pack](https://iconscout.com/illustration-pack/indian-doodle)
