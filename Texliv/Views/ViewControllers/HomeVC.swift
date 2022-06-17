@@ -19,16 +19,18 @@ class HomeVC: UIViewController {
     @IBOutlet weak var goalView: UIView!
     @IBOutlet weak var referView: UIView!
     
+    ///User info Dictionary - this data will come from previous screen while pushing VC.
     var userinfo: userInfoModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ///Displaying user name from email after trimming.
-//        labelName.text = email.components(separatedBy: "@")[0]
+        ///Calling func for UI & User information update once ui is loaded.
         updateUserInfo()
         updateUI()
     }
     
+    
+    ///Updating user information to View directly from userinfo Dictionary.
     func updateUserInfo() {
         labelName.text = "\(userinfo.firstName) \(userinfo.lastName)"
         labelEmail.text = userinfo.email
@@ -38,6 +40,7 @@ class HomeVC: UIViewController {
         avatar.load(url: url)
     }
     
+    ///Adding shadows to all the buttons.
     func updateUI() {
         avatar.addShadow(75, radius: 8)
         rewardView.addShadow(15, radius: 5)
@@ -45,10 +48,13 @@ class HomeVC: UIViewController {
         referView.addShadow(15, radius: 8)
     }
     
+    
+    ///Side menu & contact us button coming soon toast
     @IBAction func btnMenu(_ sender: UIButton) {
         Toast.show(message: "We are working on updates..!!", controller: self)
     }
     
+    ///Refer now button action this will present the UIActivityViewController with Ites to share. here im sharing basic text with some links in it.
     @IBAction func btnReferNow(_ sender: UIButton) {
         let referMessage = userinfo.referralMessage
         let textShare = [ referMessage ]

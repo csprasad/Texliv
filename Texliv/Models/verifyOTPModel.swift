@@ -9,7 +9,7 @@ import Foundation
 
 struct verifyOTPModel: Decodable {
     let isLogin: Bool
-    var user: userInfoModel
+    var user: userInfoModel?
 }
 
 struct userInfoModel: Decodable {

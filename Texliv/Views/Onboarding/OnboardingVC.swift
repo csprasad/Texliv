@@ -31,7 +31,7 @@ class OnboardingVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ///Appending data to empty slides array.
-        ///and adding total page count.
+        ///and adding total page count and button shadow as well.
         slides = [
             OnboardingSlide(title: "Fly", description: "Wherever you go, there you are.", image: #imageLiteral(resourceName: "lady-employee-working-in-office")),
             OnboardingSlide(title: "Mindfulness", description: "Mindfulness means being awake. It means knowing what you are doing.", image: #imageLiteral(resourceName: "female-candidate-job-profile")),

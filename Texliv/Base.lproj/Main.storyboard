@@ -95,6 +95,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" image="ellipsis.bubble.fill" catalog="system" title="">
                                                     <color key="baseForegroundColor" red="0.1960784314" green="0.21176470589999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btnComingSoon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mnu-2Y-6vn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -123,6 +126,9 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnComingSoon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t5l-Da-aUu"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="Lh5-nD-IdN">
                                         <rect key="frame" x="45" y="591.5" width="60" height="60"/>
@@ -250,6 +256,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" image="ellipsis.bubble.fill" catalog="system" title="">
                                                     <color key="baseForegroundColor" red="0.1960784314" green="0.21176470589999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btnComingSoon:" destination="8vW-FH-mhQ" eventType="touchUpInside" id="r5Z-11-vqQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -282,11 +291,11 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="5eW-MG-9kh"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Get OTP">
-                                            <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Get OTP">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="12"/>
@@ -447,6 +456,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" image="ellipsis.bubble.fill" catalog="system" title="">
                                                     <color key="baseForegroundColor" red="0.1960784314" green="0.21176470589999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btnComingSoon:" destination="iqS-Al-EWd" eventType="touchUpInside" id="Tdz-e2-t13"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -474,11 +486,11 @@
                                                     <constraint firstAttribute="height" constant="35" id="cU5-pq-VDb"/>
                                                     <constraint firstAttribute="width" constant="110" id="ioA-O7-Zlk"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="send again">
-                                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                                    <color key="baseForegroundColor" red="0.22352941179999999" green="0.24313725489999999" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </buttonConfiguration>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="send again">
+                                                    <color key="titleColor" red="0.22352941179999999" green="0.24313725489999999" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="btnResendOTP:" destination="iqS-Al-EWd" eventType="touchUpInside" id="SHH-Rs-TKb"/>
                                                 </connections>
@@ -509,11 +521,11 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="o1F-hU-yt6"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Get OTP">
-                                            <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Get OTP">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="12"/>
@@ -888,11 +900,11 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUd-xb-4nv">
                                                 <rect key="frame" x="10" y="10" width="362" height="80"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Refer Now">
-                                                    <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="19"/>
-                                                    <color key="baseForegroundColor" red="0.22352941179999999" green="0.24313725489999999" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </buttonConfiguration>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="19"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Refer Now">
+                                                    <color key="titleColor" red="0.22352941179999999" green="0.24313725489999999" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="btnReferNow:" destination="8O2-wo-HzJ" eventType="touchUpInside" id="aUW-8y-pDl"/>
                                                 </connections>

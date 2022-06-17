@@ -12,7 +12,6 @@
 		C81284D62853680A00AA31E2 /* verifyOTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81284D52853680A00AA31E2 /* verifyOTPModel.swift */; };
 		C8303164285C6C7D00D388FC /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8303163285C6C7D00D388FC /* Toast.swift */; };
 		C8303166285C83D800D388FC /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8303165285C83D800D388FC /* UIImageView+Extension.swift */; };
-		C8327C7328525F43003C64E5 /* girl-doing-skating.png in Resources */ = {isa = PBXBuildFile; fileRef = C8327C7228525F43003C64E5 /* girl-doing-skating.png */; };
 		C835B131285269E1000E6090 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C835B130285269E1000E6090 /* ApiResponse.swift */; };
 		C835B133285269FF000E6090 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C835B132285269FF000E6090 /* AppError.swift */; };
 		C835B13528526A16000E6090 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = C835B13428526A16000E6090 /* Method.swift */; };
@@ -20,12 +19,10 @@
 		C835B13928526A4F000E6090 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C835B13828526A4F000E6090 /* NetworkService.swift */; };
 		C835B13B28526A84000E6090 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C835B13A28526A84000E6090 /* String+Extension.swift */; };
 		C835B13D28526AB9000E6090 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C835B13C28526AB9000E6090 /* UIView+Extension.swift */; };
-		C835B14028526B18000E6090 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C835B13F28526B18000E6090 /* CardView.swift */; };
 		C835B1422852783E000E6090 /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C835B1412852783E000E6090 /* FloatingTextField.swift */; };
 		C835B14428528872000E6090 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C835B14328528872000E6090 /* CALayer+Extension.swift */; };
 		C83B8032285B3EE5001FFB0E /* UITextfield+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83B8031285B3EE4001FFB0E /* UITextfield+Extension.swift */; };
 		C83B8034285B420C001FFB0E /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83B8033285B420C001FFB0E /* OTPStackView.swift */; };
-		C83B8037285B577D001FFB0E /* NeuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83B8036285B577D001FFB0E /* NeuButton.swift */; };
 		C8627C0D2851EAA300349061 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8627C0C2851EAA300349061 /* EmailVC.swift */; };
 		C8627C0F2851F05500349061 /* OTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8627C0E2851F05500349061 /* OTPVC.swift */; };
 		C8627C11285211E600349061 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8627C10285211E600349061 /* OnboardingVC.swift */; };
@@ -47,7 +44,6 @@
 		C81284D52853680A00AA31E2 /* verifyOTPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = verifyOTPModel.swift; sourceTree = "<group>"; };
 		C8303163285C6C7D00D388FC /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		C8303165285C83D800D388FC /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
-		C8327C7228525F43003C64E5 /* girl-doing-skating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "girl-doing-skating.png"; sourceTree = "<group>"; };
 		C835B130285269E1000E6090 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		C835B132285269FF000E6090 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		C835B13428526A16000E6090 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
@@ -55,12 +51,10 @@
 		C835B13828526A4F000E6090 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C835B13A28526A84000E6090 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C835B13C28526AB9000E6090 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		C835B13F28526B18000E6090 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C835B1412852783E000E6090 /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		C835B14328528872000E6090 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 		C83B8031285B3EE4001FFB0E /* UITextfield+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Extension.swift"; sourceTree = "<group>"; };
 		C83B8033285B420C001FFB0E /* OTPStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPStackView.swift; sourceTree = "<group>"; };
-		C83B8036285B577D001FFB0E /* NeuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuButton.swift; sourceTree = "<group>"; };
 		C8627C0C2851EAA300349061 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
 		C8627C0E2851F05500349061 /* OTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVC.swift; sourceTree = "<group>"; };
 		C8627C10285211E600349061 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
@@ -89,14 +83,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C835B13E28526B06000E6090 /* CardView */ = {
-			isa = PBXGroup;
-			children = (
-				C835B13F28526B18000E6090 /* CardView.swift */,
-			);
-			path = CardView;
-			sourceTree = "<group>";
-		};
 		C83B8035285B4212001FFB0E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,7 +123,8 @@
 		C8627C142852127D00349061 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				C83B8036285B577D001FFB0E /* NeuButton.swift */,
+				C835B1412852783E000E6090 /* FloatingTextField.swift */,
+				C83B8033285B420C001FFB0E /* OTPStackView.swift */,
 				C8303163285C6C7D00D388FC /* Toast.swift */,
 			);
 			path = CustomViews;
@@ -146,11 +133,9 @@
 		C8627C15285212B300349061 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C83B8035285B4212001FFB0E /* ViewControllers */,
-				C835B13E28526B06000E6090 /* CardView */,
+				C8627C142852127D00349061 /* CustomViews */,
 				C8627C192852135100349061 /* Onboarding */,
-				C835B1412852783E000E6090 /* FloatingTextField.swift */,
-				C83B8033285B420C001FFB0E /* OTPStackView.swift */,
+				C83B8035285B4212001FFB0E /* ViewControllers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,16 +178,14 @@
 		C8A0EE3628511312006454B0 /* Texliv */ = {
 			isa = PBXGroup;
 			children = (
+				C8627C122852126100349061 /* Networking */,
 				C8627C16285212BD00349061 /* Models */,
 				C8627C15285212B300349061 /* Views */,
-				C8627C142852127D00349061 /* CustomViews */,
 				C8627C132852126E00349061 /* Extension */,
-				C8627C122852126100349061 /* Networking */,
 				C8A0EE3728511312006454B0 /* AppDelegate.swift */,
 				C8A0EE3928511312006454B0 /* SceneDelegate.swift */,
 				C8A0EE3D28511312006454B0 /* Main.storyboard */,
 				C8A0EE4028511314006454B0 /* Assets.xcassets */,
-				C8327C7228525F43003C64E5 /* girl-doing-skating.png */,
 				C8A0EE4228511314006454B0 /* LaunchScreen.storyboard */,
 				C8A0EE4528511314006454B0 /* Info.plist */,
 			);
@@ -270,7 +253,6 @@
 				C8A0EE4428511314006454B0 /* LaunchScreen.storyboard in Resources */,
 				C8A0EE4128511314006454B0 /* Assets.xcassets in Resources */,
 				C8A0EE3F28511312006454B0 /* Main.storyboard in Resources */,
-				C8327C7328525F43003C64E5 /* girl-doing-skating.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,10 +278,8 @@
 				C81284D22853313700AA31E2 /* fetchToken.swift in Sources */,
 				C8A0EE3C28511312006454B0 /* ViewController.swift in Sources */,
 				C8627C0D2851EAA300349061 /* EmailVC.swift in Sources */,
-				C835B14028526B18000E6090 /* CardView.swift in Sources */,
 				C8627C1B2852137600349061 /* OnboardingCVCell.swift in Sources */,
 				C8303164285C6C7D00D388FC /* Toast.swift in Sources */,
-				C83B8037285B577D001FFB0E /* NeuButton.swift in Sources */,
 				C8A0EE3828511312006454B0 /* AppDelegate.swift in Sources */,
 				C835B13928526A4F000E6090 /* NetworkService.swift in Sources */,
 				C835B1422852783E000E6090 /* FloatingTextField.swift in Sources */,

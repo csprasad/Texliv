@@ -40,6 +40,10 @@ class OTPVC: UIViewController, OTPDelegate {
         self.navigationController?.popViewController(animated: true)
     }
     
+    ///Contact us button action coming soon.
+    @IBAction func btnComingSoon(_ sender: UIButton) {
+        Toast.show(message: "We are still working on it..!!", controller: self)
+    }
     
     ///Verify OTP Button Action
     @IBAction func btnVerifyOTPAction(_ sender: UIButton) {

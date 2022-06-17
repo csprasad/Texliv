@@ -113,6 +113,7 @@ final class FloatingTextField: UITextField {
 
     // MARK: - Private Methods
 
+    ///customising UI
     private func setupUI() {
         borderStyle = .none
 
@@ -143,6 +144,7 @@ final class FloatingTextField: UITextField {
         }
     }
     
+    ///check if email is valid
     func isValid() -> Bool {
         return isValidEmail(self.text ?? "")
     }
@@ -168,6 +170,7 @@ final class FloatingTextField: UITextField {
         }
     }
     
+    ///checking if email is valid input. regix code
     func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 

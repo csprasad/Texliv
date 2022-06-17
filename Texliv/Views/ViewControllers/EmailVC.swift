@@ -37,6 +37,11 @@ class EmailVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    ///Contact us button action comingsoon
+    @IBAction func btnComingSoon(_ sender: UIButton) {
+        Toast.show(message: "We are still working on it..!!", controller: self)
+    }
+    
     ///API calling for get otp from networkservice class
     ///if success pushing vc to next screen OTPVC!!!
     @IBAction func btnGetOTP(_ sender: UIButton) {

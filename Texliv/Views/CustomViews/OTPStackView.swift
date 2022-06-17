@@ -13,6 +13,8 @@ protocol OTPDelegate: AnyObject {
     func didChangeValidity(isValid: Bool)
 }
 
+///class for custom textfield
+/// deleteBackward() func is for deleting otp and making previous textField become first responder.
 class OTPTextField: UITextField {
   weak var previousTextField: OTPTextField?
   weak var nextTextField: OTPTextField?
@@ -25,19 +27,20 @@ class OTPTextField: UITextField {
 
 class OTPStackView: UIStackView {
     
-    //Customise the OTPField here
+    ///Customised the OTPField here
+    ///6 otp fields will be created and all fields are pushed to empty array.
     let numberOfFields = 6
     var textFieldsCollection: [OTPTextField] = []
     weak var delegate: OTPDelegate?
     var showsWarningColor = false
     
-    //Colors
+    ///Colors
     let inactiveFieldBorderColor = UIColor(white: 1, alpha: 0.3)
     let textBackgroundColor = UIColor(white: 1, alpha: 0.5)
     let activeFieldBorderColor = UIColor.white
     var remainingStrStack: [String] = []
     
-    
+    ///initalizing fields to mainView
     required init(coder: NSCoder) {
         super.init(coder: coder)
         setupStackView()
@@ -45,7 +48,7 @@ class OTPStackView: UIStackView {
     }
     
     
-    //Customisation and setting stackView
+    ///Customisation and setting stackView
     private final func setupStackView() {
         self.backgroundColor = .clear
         self.isUserInteractionEnabled = true
@@ -56,21 +59,21 @@ class OTPStackView: UIStackView {
     }
     
     
-    //Adding each OTPfield to stack view
+    ///Adding each OTPfield to stack view
+    ///    - Line 69: Adding a marker to previous field
+    /// - Line 71:  Adding a marker to next field for the field at index-1
     private final func addOTPFields() {
         for index in 0..<numberOfFields{
             let field = OTPTextField()
             setupTextField(field)
             textFieldsCollection.append(field)
-            //Adding a marker to previous field
             index != 0 ? (field.previousTextField = textFieldsCollection[index-1]) : (field.previousTextField = nil)
-            //Adding a marker to next field for the field at index-1
             index != 0 ? (textFieldsCollection[index-1].nextTextField = field) : ()
         }
         textFieldsCollection[0].becomeFirstResponder()
     }
 
-    //Customisation and setting OTPTextFields
+    ///Customisation and setting OTPTextFields
     private final func setupTextField(_ textField: OTPTextField){
         textField.delegate = self
         textField.addShadow(5, radius: 8)
@@ -89,7 +92,7 @@ class OTPStackView: UIStackView {
     }
     
     
-    //checks if all the OTPfields are filled
+    ///checks if all the OTPfields are filled and call delegate to notify
     private final func checkForValidity(){
         for fields in textFieldsCollection{
             if (fields.text == ""){
@@ -101,7 +104,7 @@ class OTPStackView: UIStackView {
     }
     
     
-    //gives the OTP text
+    ///gives the OTP text as String!
     final func getOTP() -> String {
         var OTP = ""
         for textField in textFieldsCollection{
@@ -110,7 +113,9 @@ class OTPStackView: UIStackView {
         return OTP
     }
     
-    //autofill textfield starting from first
+    /// if selected from keyboard popup OTP - autofill textfield starting from first
+    ///  then calling checkForValidity() to validate if all fields are filled or not.
+    ///  then setting remainingStrStack to  nil
     private final func autoFillTextField(with string: String) {
         remainingStrStack = string.reversed().compactMap{String($0)}
         for textField in textFieldsCollection {
@@ -137,12 +142,13 @@ extension OTPStackView: UITextFieldDelegate {
         textField.layer.borderColor = activeFieldBorderColor.cgColor
     }
     
+    ///once all fields are filled and editing did end then checkforvalidity() again.
     func textFieldDidEndEditing(_ textField: UITextField) {
         checkForValidity()
         textField.layer.borderColor = inactiveFieldBorderColor.cgColor
     }
     
-    //switches between OTPTextfields
+    ///switches between OTPTextfields based user selection if string contains more then 1 char then it will start auto fille else it will add one char to text filed and push next -
     func textField(_ textField: UITextField, shouldChangeCharactersIn range:NSRange,
                    replacementString string: String) -> Bool {
         guard let textField = textField as? OTPTextField else { return true }
