@@ -38,6 +38,7 @@ class OnboardingVC: UIViewController {
             OnboardingSlide(title: "Live", description: "Live the actual moment. Only this actual moment is life.", image: #imageLiteral(resourceName: "woman-looking-at-dating-app"))
         ]
         pageControl.numberOfPages = slides.count
+        nextBtn.addShadow(15, radius: 8)
     }
     
     
