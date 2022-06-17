@@ -73,7 +73,7 @@ class OTPStackView: UIStackView {
     //Customisation and setting OTPTextFields
     private final func setupTextField(_ textField: OTPTextField){
         textField.delegate = self
-//        textField.layer.addBorder(edge: .bottom, color: .lightGray, thickness: 1)
+        textField.addShadow(5, radius: 8)
         textField.translatesAutoresizingMaskIntoConstraints = false
         self.addArrangedSubview(textField)
         textField.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
@@ -82,8 +82,6 @@ class OTPStackView: UIStackView {
         textField.backgroundColor = textBackgroundColor
         textField.textAlignment = .center
         textField.adjustsFontSizeToFitWidth = false
-        textField.layer.cornerRadius = 5
-        textField.layer.borderWidth = 2
         textField.layer.borderColor = inactiveFieldBorderColor.cgColor
         textField.keyboardType = .numberPad
         textField.autocorrectionType = .yes

@@ -9,11 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var btnGoogleSignIn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        ///Adding shadow to button.
+        btnGoogleSignIn.addShadow(15, radius: 8)
     }
-
 
 }
 

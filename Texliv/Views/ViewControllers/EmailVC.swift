@@ -9,15 +9,19 @@ import UIKit
 
 class EmailVC: UIViewController {
     
-    // IBOutlets for UI Referance
+    /// IBOutlets for UI Referance
     @IBOutlet weak var buttonGetOtp: UIButton!
     @IBOutlet weak var emailTextField: FloatingTextField!
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        buttonGetOtp.addShadow(15, radius: 8) ///Adding shadow to button
+        emailTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)        ///Textfield editing change action target for enabling button OTP.
     }
     
+    ///textfield editingChange func
+    ///if email is valid then button color will change accordingly and it will enable button user interaction as well.
+    /// updatung button color & unser interaction
     @objc func textFieldDidChange(_ textField: UITextField) {
         if emailTextField.isValid() {
             buttonGetOtp.isUserInteractionEnabled = true
@@ -28,23 +32,27 @@ class EmailVC: UIViewController {
         }
     }
     
-    //Back button action
+    ///Back button action
     @IBAction func backAction(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
+    ///API calling for get otp from networkservice class
+    ///if success pushing vc to next screen OTPVC!!!
     @IBAction func btnGetOTP(_ sender: UIButton) {
-        
         NetworkService.shared.fetchToken(email: emailTextField.text ?? "") { (result) in
             switch result {
-            case .success(let token):
-                print("Token is:", token)
+            case .success(let res):
+                print("Token is:", res.results?.token ?? "0")
+                guard let token = res.results else {return}
                 let controller = OTPVC.instantiate()
                 controller.tokenDict = token
                 controller.email = self.emailTextField.text ?? ""
                 self.navigationController?.pushViewController(controller, animated: true)
             case .failure(let error):
-                print("error is:", error.localizedDescription)            }
+                print("error is:", error.localizedDescription)
+                Toast.show(message: error.localizedDescription, controller: self)
+            }
         }
     }
     

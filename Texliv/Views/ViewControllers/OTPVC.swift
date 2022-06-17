@@ -9,25 +9,18 @@ import UIKit
 
 class OTPVC: UIViewController, OTPDelegate {
     
+    //OTP Delegate function.
+    ///OTP is valid all textfields are filled and color and interaction will be enabled
+    ///OTP is invalid all textfields are not filled and color and interaction will be disabled
     func didChangeValidity(isValid: Bool) {
         if isValid {
-            print("valid otp")
             btnGetOtp.isUserInteractionEnabled = true
             btnGetOtp.backgroundColor = #colorLiteral(red: 0.2235294118, green: 0.2431372549, blue: 0.2745098039, alpha: 1)
         } else {
-            print("invalid otp")
             btnGetOtp.isUserInteractionEnabled = false
             btnGetOtp.backgroundColor = #colorLiteral(red: 0.5725490196, green: 0.6039215686, blue: 0.6705882353, alpha: 1)
         }
     }
-    
-    
-    @IBOutlet weak var txtFldOtp1: UITextField!
-    @IBOutlet weak var txtFldOtp2: UITextField!
-    @IBOutlet weak var txtFldOtp3: UITextField!
-    @IBOutlet weak var txtFldOtp4: UITextField!
-    @IBOutlet weak var txtFldOtp5: UITextField!
-    @IBOutlet weak var txtFldOtp6: UITextField!
     
     @IBOutlet weak var OTPStackView: OTPStackView!
 
@@ -38,33 +31,55 @@ class OTPVC: UIViewController, OTPDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        OTPStackView.delegate = self
+        btnGetOtp.addShadow(15, radius: 8)   ///Adding shadow to button
+        OTPStackView.delegate = self ///OTPStackView delegate linking to self to access data here.
     }
     
-    //back button Action
+    ///back button Action
     @IBAction func backAction(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
     
-    //Verify OTP Action
+    ///Verify OTP Button Action
     @IBAction func btnVerifyOTPAction(_ sender: UIButton) {
-        print("Otp is:",OTPStackView.getOTP())
+        APIServiceCallingForOTPVerification() //Api calling from func
+    }
+    
+    ///Resend OTP button action
+    @IBAction func btnResendOTP(_ sender: UIButton) {
+        APIServiceCallingForOTPVerification() //Api calling from func
+    }
+    
+    ///OTP verification API Request to Network service class.
+    ///Checking token valid response then pushing to next screen.
+    ///basic data sending to next VC for display.
+    func APIServiceCallingForOTPVerification() {
+        print("Otp is:",OTPStackView.getOTP()) ///check otp.
+        
         NetworkService.shared.verifyOTP(token: String(tokenDict.token), email: email, code: OTPStackView.getOTP()) { (result) in
             switch result {
             case .success(let token):
                 print("Token is:", token)
-                let controller = HomeVC.instantiate()
-                controller.email = self.email
-                self.navigationController?.pushViewController(controller, animated: true)
+                
+                if let isLogin = token.results?.isLogin {
+                    print(isLogin,"current", self.tokenDict.isLogin, "previous")
+                    if self.tokenDict.isLogin && isLogin {
+                        let controller = HomeVC.instantiate()
+                        controller.userinfo = token.results?.user
+                        self.navigationController?.pushViewController(controller, animated: true)
+                    } else {
+                        Toast.show(message: "\(token.message), but isLogin is not true", controller: self)
+                    }
+                } else {
+                    Toast.show(message: "\(token.message)", controller: self)
+                }
             case .failure(let error):
                 print("error is:", error.localizedDescription)
+                Toast.show(message: error.localizedDescription, controller: self)
+                
             }
         }
-    }
-    
-    @IBAction func btnResendOTP(_ sender: UIButton) {
-        
     }
     
 }

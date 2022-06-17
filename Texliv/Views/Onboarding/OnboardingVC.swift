@@ -13,8 +13,10 @@ class OnboardingVC: UIViewController {
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    ///Empty array of OnboardingSlide Data model
     var slides: [OnboardingSlide] = []
     
+    ///Current page count and updating button data as well.
     var currentPage = 0 {
         didSet {
             pageControl.currentPage = currentPage
@@ -28,17 +30,19 @@ class OnboardingVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        ///Appending data to empty slides array.
+        ///and adding total page count.
         slides = [
             OnboardingSlide(title: "Fly", description: "Wherever you go, there you are.", image: #imageLiteral(resourceName: "lady-employee-working-in-office")),
             OnboardingSlide(title: "Mindfulness", description: "Mindfulness means being awake. It means knowing what you are doing.", image: #imageLiteral(resourceName: "female-candidate-job-profile")),
             OnboardingSlide(title: "Live", description: "Live the actual moment. Only this actual moment is life.", image: #imageLiteral(resourceName: "woman-looking-at-dating-app"))
         ]
-        
         pageControl.numberOfPages = slides.count
-
     }
     
+    
+    ///Next button Action based on conditon
+    ///if current page = last slide then it will take to landing login page. if not last page then it will go to next slide.
     @IBAction func nextBtnClicked(_ sender: UIButton) {
         if currentPage == slides.count - 1 {
             let controller = storyboard?.instantiateViewController(identifier: "HomeNC") as! UINavigationController
@@ -55,7 +59,7 @@ class OnboardingVC: UIViewController {
     
 }
 
-
+///Extension for collectionview delegate and data source.
 extension OnboardingVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return slides.count

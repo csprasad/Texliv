@@ -15,12 +15,12 @@ struct NetworkService {
     
     private init() {}
     
-    func fetchToken(email: String, completion: @escaping(Result<fetchTokenModel, Error>) -> Void) {
+    func fetchToken(email: String, completion: @escaping(Result<ApiResponse<fetchTokenModel>, Error>) -> Void) {
         let params = ["email": email]
         request(route: .fetchToken, method: .post, parameters: params, completion: completion)
     }
     
-    func verifyOTP(token: String, email: String, code: String, completion: @escaping(Result<verifyOTPModel, Error>) -> Void) {
+    func verifyOTP(token: String, email: String, code: String, completion: @escaping(Result<ApiResponse<verifyOTPModel>, Error>) -> Void) {
         let params = ["token": token, "email": email, "verificationCode": code]
         
         request(route: .otpValidate, method: .put, parameters: params, completion: completion)
@@ -31,7 +31,7 @@ struct NetworkService {
     private func request<T: Decodable>(route: Route,
                                      method: Method,
                                      parameters: [String: Any]? = nil,
-                                     completion: @escaping(Result<T, Error>) -> Void) {
+                                     completion: @escaping(Result<ApiResponse<T>, Error>) -> Void) {
         guard let request = createRequest(route: route, method: method, parameters: parameters) else {
             completion(.failure(AppError.unknownError))
             return
@@ -55,20 +55,11 @@ struct NetworkService {
     }
     
     private func handleResponse<T: Decodable>(result: Result<Data, Error>?,
-                                              completion: (Result<T, Error>) -> Void) {
+                                              completion: (Result<ApiResponse<T>, Error>) -> Void) {
         guard let result = result else {
             completion(.failure(AppError.unknownError))
             return
         }
-        
-//
-//        do {
-//            let dd = JSONDecoder()
-//            let di = try! dd.decode(ApiResponse<T>.self, from: result.get())
-//            print("dddd",di)
-//        } catch let error {
-//            print("hi na", error.localizedDescription)
-//        }
         
         switch result {
         case .success(let data):
@@ -83,12 +74,11 @@ struct NetworkService {
                 return
             }
             
-            
-            if let decodedData = response.results {
-                completion(.success(decodedData))
-            } else {
-                completion(.failure(AppError.unknownError))
-            }
+//            if response != nil {
+                completion(.success(response))
+//            } else {
+//                completion(.failure(AppError.unknownError))
+//            }
         case .failure(let error):
             completion(.failure(error))
         }
