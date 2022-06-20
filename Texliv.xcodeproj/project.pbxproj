@@ -83,15 +83,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C83B8035285B4212001FFB0E /* ViewControllers */ = {
+		C83B8035285B4212001FFB0E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C8627C10285211E600349061 /* OnboardingVC.swift */,
 				C8A0EE3B28511312006454B0 /* ViewController.swift */,
 				C8627C0C2851EAA300349061 /* EmailVC.swift */,
 				C8627C0E2851F05500349061 /* OTPVC.swift */,
 				C81284D32853377500AA31E2 /* HomeVC.swift */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		C8627C122852126100349061 /* Networking */ = {
@@ -134,8 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				C8627C142852127D00349061 /* CustomViews */,
-				C8627C192852135100349061 /* Onboarding */,
-				C83B8035285B4212001FFB0E /* ViewControllers */,
+				C8627C192852135100349061 /* CollectionViewCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,13 +150,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		C8627C192852135100349061 /* Onboarding */ = {
+		C8627C192852135100349061 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				C8627C10285211E600349061 /* OnboardingVC.swift */,
 				C8627C1A2852137600349061 /* OnboardingCVCell.swift */,
 			);
-			path = Onboarding;
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 		C8A0EE2B28511312006454B0 = {
@@ -181,6 +180,7 @@
 				C8627C122852126100349061 /* Networking */,
 				C8627C16285212BD00349061 /* Models */,
 				C8627C15285212B300349061 /* Views */,
+				C83B8035285B4212001FFB0E /* Controllers */,
 				C8627C132852126E00349061 /* Extension */,
 				C8A0EE3728511312006454B0 /* AppDelegate.swift */,
 				C8A0EE3928511312006454B0 /* SceneDelegate.swift */,
