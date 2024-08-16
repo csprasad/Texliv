@@ -23,10 +23,10 @@ Texliv is a demo application for getBasis interview.
 ## App Screens
 
 ### - Onbaording Slides
-<img src="https://github.com/csprasad/Texliv/blob/main/App%20Screens/App_screen_1.png" data-canonical-src="https://github.com/csprasad/Texliv/blob/main/App%20Screens/App_screen_1.png"/>
+<img src="../../blob/main/App%20Screens/App_screen_1.png"/>
 
 ### - Email & OTP Screens | Home
-<img src="https://github.com/csprasad/Texliv/blob/main/App%20Screens/App_screen_2.png" data-canonical-src="https://github.com/csprasad/Texliv/blob/main/App%20Screens/App_screen_2.png" />
+<img src="../../blob/main/App%20Screens/App_screen_2.png"/>
 
 
 
