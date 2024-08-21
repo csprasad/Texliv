@@ -9,7 +9,7 @@ Texliv is a demo application for getBasis interview.
 ### Tested Configurations
 - macOS Monterey (version 12.3)
 - Xcode (version 13.2.1 (13C100))
-- iOS 13.0 (only tested on iPhone 11 | did not tested on any other phone varient)
+- iOS 13.0 (only tested on iPhone 11)
 
 ## Easiest way to run the application
 - Download ZIP
