@@ -32,7 +32,6 @@ Texliv is a demo application for getBasis interview.
 Image credit's : Iconscout Store - [Indian Doodle Illustration Pack](https://iconscout.com/illustration-pack/indian-doodle)
 
 ## License
-
 This project is licensed under the **MIT License**.
 
 
